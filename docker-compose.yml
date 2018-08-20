@@ -3,7 +3,7 @@ services:
   mldocker:
     container_name: mldocker
     build: .
-    command: bash -c "jupyter notebook --ip 0.0.0.0 --allow-root"
+    command: bash -c "jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"
     volumes:
       - ./notebooks:/jupyter
     ports:

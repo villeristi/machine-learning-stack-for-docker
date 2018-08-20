@@ -3,18 +3,20 @@
 Kickstart your Machine Learning experiments with Python 3.6 & this toolkit.
 
 **Libraries included:**
-  * [jupyter](http://jupyter.org/)
-  * [keras](https://keras.io/)
+  * [Jupyter](http://jupyter.org/)
+  * [Keras](https://keras.io/)
   * [MRJob](https://pythonhosted.org/mrjob/)
-  * [matplotlib](https://matplotlib.org/)
-  * [numpy](http://www.numpy.org/)
-  * [opencv-python](https://opencv.org/)
-  * [pandas](https://pandas.pydata.org/)
-  * [requests](http://docs.python-requests.org/en/master/)
-  * [scikit-learn](http://scikit-learn.org/stable/)
-  * [scipy](https://www.scipy.org/)
-  * [seaborn](https://seaborn.pydata.org/)
-  * [tensorflow](https://www.tensorflow.org/)
+  * [Matplotlib](https://matplotlib.org/)
+  * [NLTK](https://www.nltk.org/)
+  * [Numpy](http://www.numpy.org/)
+  * [OpenCV](https://opencv.org/)
+  * [Pandas](https://pandas.pydata.org/)
+  * [Requests](http://docs.python-requests.org/en/master/)
+  * [Scikit-learn](http://scikit-learn.org/stable/)
+  * [Scipy](https://www.scipy.org/)
+  * [Seaborn](https://seaborn.pydata.org/)
+  * [Spark](https://spark.apache.org/)
+  * [Tensorflow](https://www.tensorflow.org/)
 
 ### Getting started
 Make sure you have [Docker](https://www.docker.com/) installed. 
