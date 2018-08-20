@@ -90,5 +90,5 @@ RUN mkdir -p  ~/.jupyter
 RUN echo "c.NotebookApp.token = u''" >> ~/.jupyter/jupyter_notebook_config.py
 
 # Start jupyter notebook
-CMD ["jupyter notebook --ip 0.0.0.0 --allow-root"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root"]
 
