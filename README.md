@@ -21,7 +21,7 @@ Kickstart your Machine Learning experiments with Python 3.6 & this toolkit.
 ### Getting started
 Make sure you have [Docker](https://www.docker.com/) installed. 
 1. Clone this repo & run `docker build . -t mldocker`
-2. Run `docker run -it -p 8888:8888 -v notebooks:/jupyter mldocker`
+2. Run `docker run -it -p 8888:8888 -v $(pwd)/notebooks:/jupyter mldocker`
 3. Open [http://localhost:8888](http://localhost:8888)
 4. Create something awesome!
 
