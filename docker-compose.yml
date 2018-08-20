@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mldocker:
+    container_name: mldocker
+    build: .
+    command: bash -c "jupyter notebook --ip 0.0.0.0 --allow-root"
+    volumes:
+      - ./notebooks:/app
+    ports:
+      - 8888:8888
+    restart: always
+    environment:
+      - PYTOHNBUFFERED=1
+      - NOTEBOOK_PWD=mldocker
