@@ -5,7 +5,7 @@ services:
     build: .
     command: bash -c "jupyter notebook --ip 0.0.0.0 --allow-root"
     volumes:
-      - ./notebooks:/app
+      - ./notebooks:/jupyter
     ports:
       - 8888:8888
     restart: always
