@@ -1,6 +1,6 @@
 # Machine Learning stack for Docker
 
-Kickstart your Machine Learning experiments with Python 3.6 & this toolkit.
+Kickstart your Machine Learning experiments with Python 3.6, Jupyter Notebook, Docker and multiple libraries & tools.
 
 **Libraries included:**
   * [Jupyter](http://jupyter.org/)
