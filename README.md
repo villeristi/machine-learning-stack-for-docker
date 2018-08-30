@@ -12,16 +12,18 @@ Kickstart your Machine Learning experiments with Python 3.6, Jupyter Notebook, D
   * [OpenCV](https://opencv.org/)
   * [Pandas](https://pandas.pydata.org/)
   * [Requests](http://docs.python-requests.org/en/master/)
+  * [Scikit-image](https://scikit-image.org/)
   * [Scikit-learn](http://scikit-learn.org/stable/)
   * [Scipy](https://www.scipy.org/)
   * [Seaborn](https://seaborn.pydata.org/)
   * [Spark](https://spark.apache.org/)
+  * [Statsmodels](https://www.statsmodels.org/stable/index.html)
   * [Tensorflow](https://www.tensorflow.org/)
 
 ### Getting started
-Make sure you have [Docker](https://www.docker.com/) installed. 
+Make sure you have [Docker](https://www.docker.com/) installed.
 1. Clone this repo & run `docker build . -t mldocker`
-2. Run `docker run -it -p 8888:8888 -v $(pwd)/notebooks:/jupyter mldocker`
+2. Run `docker run -it -p 8888:8888 -v $(pwd)/notebooks:/app/jupyter mldocker`
 3. Open [http://localhost:8888](http://localhost:8888)
 4. Create something awesome!
 
@@ -31,3 +33,5 @@ With [docker-compose](https://docs.docker.com/compose/):
 3. Open [http://localhost:8888](http://localhost:8888)
 4. Create something awesome!
 
+## Adding new libraries
+Just add your library to `requirements.txt` & run the build again
