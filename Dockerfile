@@ -32,6 +32,7 @@ RUN apt-get install -y --no-install-recommends \
     cmake \
     curl \
     gcc \
+    imagemagick \
     libavformat-dev \
     libgtk2.0-dev \
     libjpeg-dev \
@@ -46,7 +47,6 @@ RUN apt-get install -y --no-install-recommends \
     python3-dev \
     python3-setuptools \
     python3-software-properties \
-    unzip \
     unzip \
     wget \
     yasm \
