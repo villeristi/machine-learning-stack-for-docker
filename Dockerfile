@@ -12,8 +12,8 @@ ENV SPARK_VERSION "spark-2.3.1-bin-hadoop2.7"
 ENV SPARK_MIRROR "http://www.nic.funet.fi/pub/mirrors/apache.org/spark/spark-2.3.1"
 
 # Create folders
-RUN mkdir /jupyter
-WORKDIR /jupyter
+RUN mkdir -p /app/jupyter
+WORKDIR /app
 
 # Add apt-level deps
 RUN sed 's/main$/main universe/' -i /etc/apt/sources.list
@@ -22,31 +22,34 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends software-properties-common \
     && apt-get update
 
+RUN apt-get install -y opencv-data \
+    libopencv-dev \
+    && apt-get update -y
+
 RUN apt-get install -y --no-install-recommends \
-    gcc \
-    gcc \
+    apt-transport-https \
+    build-essential \
+    cmake \
     curl \
+    gcc \
+    libavformat-dev \
+    libgtk2.0-dev \
+    libjpeg-dev \
+    libpng-dev \
+    libpq-dev \
+    libswscale-dev \
+    libtbb-dev \
+    libtbb2 \
+    libtiff-dev \
+    pkg-config \
+    python-numpy \
+    python3-dev \
+    python3-setuptools \
+    python3-software-properties \
+    unzip \
+    unzip \
     wget \
     yasm \
-    unzip \
-    cmake \
-    unzip \
-    libtbb2 \
-    libpq-dev \
-    pkg-config \
-    libtbb-dev \
-    libpng-dev \
-    python3-dev \
-    libjpeg-dev \
-    libtiff-dev \
-    python-numpy \
-    libgtk2.0-dev \
-    libswscale-dev \
-    build-essential \
-    libavformat-dev \
-    python3-setuptools \
-    apt-transport-https \
-    python3-software-properties \
     && apt-get update \
     && apt-get install
 
@@ -73,22 +76,8 @@ ENV PATH=$SPARK_HOME/bin:$PATH
 
 # Add pip deps
 RUN pip install -U pip
-RUN pip install \
-    findspark \
-    jupyter \
-    keras \
-    matplotlib \
-    mrjob \
-    nltk \
-    numpy \
-    opencv-python \
-    pandas \
-    pyspark \
-    requests \
-    scikit-learn \
-    scipy \
-    seaborn \
-    tensorflow
+COPY requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt
 
 # Clean up redundancies
 RUN /bin/rm -rf \
@@ -118,9 +107,11 @@ EXPOSE 8888
 # Create local jupyter conf-folder
 RUN mkdir -p  ~/.jupyter
 
+# Set workdir again
+WORKDIR /app/jupyter
+
 # Disable password from notebook web-server
 RUN echo "c.NotebookApp.token = u''" >> ~/.jupyter/jupyter_notebook_config.py
 
 # Start jupyter notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
-
