@@ -2,7 +2,7 @@ absl-py==0.4.1
 appnope==0.1.0; sys_platform == 'darwin'
 astor==0.7.1
 backcall==0.1.0
-bleach==2.1.4
+bleach==3.1.1
 boto3==1.8.4
 botocore==1.11.4
 cachetools==2.1.0
