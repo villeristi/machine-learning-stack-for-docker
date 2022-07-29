@@ -47,7 +47,7 @@ kiwisolver==1.0.1
 markdown==2.6.11
 markupsafe==1.0
 matplotlib==2.2.3
-mistune==0.8.3
+mistune==2.0.3
 mrjob==0.6.4
 nbconvert==5.3.1
 nbformat==4.4.0
