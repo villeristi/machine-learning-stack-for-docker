@@ -49,7 +49,7 @@ markupsafe==1.0
 matplotlib==2.2.3
 mistune==0.8.3
 mrjob==0.6.4
-nbconvert==5.3.1
+nbconvert==6.3.0
 nbformat==4.4.0
 networkx==2.1
 nltk==3.3.0
