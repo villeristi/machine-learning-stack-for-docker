@@ -65,7 +65,7 @@ pickleshare==0.7.4
 pillow==5.2.0
 prometheus-client==0.3.1
 prompt-toolkit==1.0.15
-protobuf==3.6.1
+protobuf==3.18.3
 ptyprocess==0.6.0; os_name != 'nt'
 py4j==0.10.7
 pyasn1-modules==0.2.2
